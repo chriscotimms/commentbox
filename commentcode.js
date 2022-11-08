@@ -1,6 +1,8 @@
 const formData = document.querySelectorAll('#myForm input');
 let commentInfo = document.getElementById('comment');
 
+
+
 window.addEventListener('load', myFunction1);
 function myFunction1() {
     document.getElementById('charInfo').innerHTML = commentInfo.value.length + '/140';
@@ -9,7 +11,9 @@ function myFunction1() {
 
 commentInfo.addEventListener('input', myFunction2);
 function myFunction2() {
+  comment.classList.remove("error");
     document.getElementById('charInfo').innerHTML = commentInfo.value.length + '/140';
+    
 };
 
 //document.getElementById('comment').addEventListener('input', myFunction2);
@@ -26,7 +30,8 @@ function myFunction(event) {
 
  
   if (commentInfo.value.length > 140) {
-    alert("too many characters");
+    comment.classList.add("error");
+    //alert("too many characters");
   } else {
 
 
@@ -39,7 +44,7 @@ function myFunction(event) {
   const divv2 = document.createElement("div"); 
   divv2.className = 'blue';
   
-  const text = document.createTextNode(formData.item(0).value + ' ' + formData.item(1).value);
+  const text = document.createTextNode(formData.item(0).value + formData.item(1).value);
   const text2 = document.createTextNode(commentinput);  //formData.item(2).value
 
   divv.appendChild(text);
