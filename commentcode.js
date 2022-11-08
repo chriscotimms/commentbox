@@ -44,6 +44,27 @@ function myFunction(event) {
   const divv2 = document.createElement("div"); 
   divv2.className = 'blue';
   
+  const text = document.createTextNode(formData.item(0).value);
+  const texta = document.createElement("br"); 
+  const textb = document.createTextNode(formData.item(1).value);
+  const text2 = document.createTextNode(commentinput);  //formData.item(2).value
+
+  divv.appendChild(text);
+  divv.appendChild(texta);
+  divv.appendChild(textb);
+  divv2.appendChild(text2);
+
+  document.getElementById("divvy").appendChild(divv).appendChild(divv2);
+
+}
+}
+
+
+
+
+
+
+/*
   const text = document.createTextNode(formData.item(0).value + formData.item(1).value);
   const text2 = document.createTextNode(commentinput);  //formData.item(2).value
 
@@ -51,26 +72,6 @@ function myFunction(event) {
   divv2.appendChild(text2);
 
   document.getElementById("divvy").appendChild(divv).appendChild(divv2);
-  //document.getElementById("divvy").appendChild(divv2);
-}
-}
-
-
-
-
-
-
-/*document.getElementById('btn')
-.addEventListener('click', myFunction);
-
-const name = document.getElementById('name').value;
-const email = document.getElementById('email').value;
-const comment = document.getElementById('comment').value;
-
-function myFunction(event) {
- event.preventDefault;
- document.getElementById("divvy").innerHTML = (name + email + comment);
-}
 */
 
 

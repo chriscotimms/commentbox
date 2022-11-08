@@ -44,11 +44,12 @@ input {
 }
 
 input:focus {
-  border: 1px solid rgb(180, 255, 179);
+  border: 2px solid rgb(180, 255, 179);
 }
 
 .error {
-  border: 1px solid rgb(255, 0, 0);
+  border: 2px solid rgb(255, 0, 0);
+  background-color: pink;
 }
 
 .divvy {
