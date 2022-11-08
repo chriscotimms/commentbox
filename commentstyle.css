@@ -1,23 +1,58 @@
 body {
   background: dodgerblue linear-gradient(45deg, aqua, dodgerblue, deeppink) fixed;
-
+  height: 90%;
 }
 #comment-box, #post {
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
 }
 #post:hover{
   background-color: deeppink;
 }
 
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 1px;
+  box-sizing: border-box;
+  border: 2px solid rgb(164, 160, 160);
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+  outline: none;
+}
+
+.formstyle {
+  background-color: aqua;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+
 .white {
-  background-color: rgb(203, 203, 255);
-  color: aquamarine;
-  padding: 20px;
+  color: rgb(56, 56, 56);
+  width: auto;
+  padding: 5px;
+  font-size: 14px;
 }
 
 .blue {
-  background-color: blue;
-  color: rgb(255, 72, 0);
-  padding: 40px;
+  color: rgb(27, 27, 27);
+  padding: 10px;
+  margin: 5px;
+  font-size: 18px;
+}
+
+input:focus {
+  border: 1px solid rgb(180, 255, 179);
+}
+
+.error {
+  border: 1px solid rgb(255, 0, 0);
+}
+
+.divvy {
+  display: flex;
+  align-items: left;
+  justify-content: left;
 }
