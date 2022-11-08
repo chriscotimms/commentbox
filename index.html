@@ -14,20 +14,23 @@
     <form id="myForm" method="post" name="myForm">
 
         <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" value="johnny"><br>
+        <input type="text" id="name" name="name" placeholder="Your Name"><br>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" value="js@js.com"><br>
+        <input type="email" id="email" name="email" placeholder="Your Email"><br>
         
         <label for="comment">Comment</label>
-        <input type="text" id="comment" name="comment" value="furious comment web trolling etc"><div id="charInfo"></div><br>
+        
+        <input type="text" id="comment" name="comment" maxlength="141" size="60" placeholder="Enter your comment here" value=""><br><div id="charInfo"></div>
         <input type="button" id="btn" value="submit">
     </form>
     
     <script src="commentcode.js"></script>
    
+        <!--<input type="text" id="comment" name="comment" maxlength="140" size="60" placeholder="Enter your comment here" value=""><br><div id="charInfo"></div>-->
+        
+<!-- <textarea id="comment" name="comment" form="myForm" maxlength="140" cols="2" rows="3" placeholder="Enter your comment here"></textarea><br><div id="charInfo"></div>
 
-<!-- 
     <div class="container">
         <h2>Leave us a comment</h2>
         <form>

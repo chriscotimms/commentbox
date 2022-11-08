@@ -1,13 +1,21 @@
 const formData = document.querySelectorAll('#myForm input');
+let commentInfo = document.getElementById('comment');
 
-
-
-document.getElementById('comment').addEventListener('input', myFunction2);
-
-function myFunction2() {
-    document.getElementById('charInfo').innerHTML = document.getElementById('comment').value.length + '/140';
+window.addEventListener('load', myFunction1);
+function myFunction1() {
+    document.getElementById('charInfo').innerHTML = commentInfo.value.length + '/140';
 };
 
+
+commentInfo.addEventListener('input', myFunction2);
+function myFunction2() {
+    document.getElementById('charInfo').innerHTML = commentInfo.value.length + '/140';
+};
+
+//document.getElementById('comment').addEventListener('input', myFunction2);
+//function myFunction2() {
+ //   document.getElementById('charInfo').innerHTML = document.getElementById('comment').value.length + '/140';
+//};
 
 
 document.getElementById('btn')
@@ -15,13 +23,16 @@ document.getElementById('btn')
 
 function myFunction(event) {
   event.preventDefault;
+
+ 
+  if (commentInfo.value.length > 140) {
+    alert("too many characters");
+  } else {
+
+
   //document.getElementById("divvy").innerHTML = formData.item(0).value + '<br>' + formData.item(1).value + '<br>' + formData.item(2).value;
   const commentinput = formData.item(2).value;
  
-
-
-
-
   const divv = document.createElement("div"); 
   divv.className = 'white';
 
@@ -36,6 +47,7 @@ function myFunction(event) {
 
   document.getElementById("divvy").appendChild(divv).appendChild(divv2);
   //document.getElementById("divvy").appendChild(divv2);
+}
 }
 
 
